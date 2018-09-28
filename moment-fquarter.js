@@ -4,12 +4,18 @@
 // license : MIT
 // github.com/robgallen/moment-fquarter
 
+var Moment = require("moment");
+
 (function () {
 
 	function onload(moment) {
 		moment.fn.fquarter = function (startMonth) {
 			startMonth = startMonth || 4; // default is April
-			var thisDate = this.clone();
+
+			// In order to ignore timezone setting of this, export as date string and create new moment
+			var dateString = this.format('YYYY-MM-DD');
+			var thisDate = Moment(dateString).startOf('day');
+
 			var initial = thisDate.local()._quarter || "Q";
 			var result = {};
 			var adjustedDate = thisDate;
