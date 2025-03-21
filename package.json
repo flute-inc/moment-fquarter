@@ -1,6 +1,6 @@
 {
   "name": "moment-fquarter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Fiscal quarterly formatting for momentjs",
   "author": "Rob Allen",
   "contributors": [
@@ -13,11 +13,14 @@
     "test": "mocha --reporter progress \"moment-fquarter.test.js\""
   },
   "main": "moment-fquarter.js",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "devDependencies": {
-    "chai": "3.5.0",
-    "mocha": "3.2.0",
-    "moment": "~2.17.1",
-    "moment-timezone": "0.5.21"
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.43"
   },
   "license": "MIT"
 }

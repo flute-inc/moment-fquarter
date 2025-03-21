@@ -14,7 +14,7 @@ var Moment = require("moment");
 
 			// In order to ignore timezone setting of this, export as date string and create new moment
 			var dateString = this.format('YYYY-MM-DD');
-			var thisDate = Moment(dateString).startOf('day');
+			var thisDate = moment(dateString).startOf('day');
 
 			var initial = thisDate.local()._quarter || "Q";
 			var result = {};
@@ -76,4 +76,5 @@ var Moment = require("moment");
 		onload(window.moment);
 	}
 
-}).apply(this);
+// Node.js v20での`this`の変更に対応するため、thisのコンテキストを明示的に指定
+}).call(typeof global !== 'undefined' ? global : typeof window !== 'undefined' ? window : typeof self !== 'undefined' ? self : this);
