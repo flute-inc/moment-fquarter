@@ -1,6 +1,6 @@
 {
   "name": "moment-fquarter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Fiscal quarterly formatting for momentjs",
   "author": "Rob Allen",
   "contributors": [
